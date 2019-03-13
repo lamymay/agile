@@ -1,0 +1,115 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: aglie
+  profiles:
+    active: local
+    #这里指定激活那个配置的空间
+  resources:
+    add-mappings: false
+    static-locations: classpath:/static/,classpath:/templates/index/
+    #,classpath:/META-INF/resources/webjars/,classpath:/META-INF/resources
+  #   static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/
+  #,file:${web.upload-path},file:${web.vue-path}
+  mvc:
+    throw-exception-if-no-handler-found: true
+    static-path-pattern: /static/**
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+    #https://blog.csdn.net/zoeou/article/details/78629032
+
+#配置日志
+#  这里日志用xml去配置
+logback:
+  dir: ./log
+
+
+#MybatisPlus
+mybatis-plus:
+  # 如果是放在src/main/java目录下 classpath:/com/yourpackage/*/mapper/*Mapper.xml
+  # 如果是放在resource目录 classpath:/mapper/*Mapper.xml
+  mapper-locations: classpath:/mapper/*/*.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: com.arc.agile.model.domain
+  #typeEnumsPackage: com.baomidou.springboot.entity.enums
+  global-config:
+    #主键类型  0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
+    id-type: 0
+    #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
+    field-strategy: 1
+    #驼峰下划线转换
+    #db-column-underline: true
+    #刷新mapper 调试神器
+    #refresh-mapper: true
+    #数据库大写下划线转换
+    #capital-mode: true
+    # Sequence序列接口实现类配置
+    #key-generator: com.baomidou.mybatisplus.incrementer.OracleKeyGenerator
+    #逻辑删除配置（下面3个配置）
+    #logic-delete-value: 1
+    #logic-not-delete-value: 0
+    #sql-injector: com.baomidou.mybatisplus.mapper.LogicSqlInjector
+    #自定义填充策略接口实现
+    #meta-object-handler: com.baomidou.springboot.MyMetaObjectHandler
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    #配置JdbcTypeForNull
+    jdbc-type-for-null: 'null'
+
+#hikari:
+#  primary:
+#    jdbc-url: jdbc:mysql://127.0.0.1:3306/test2?useUnicode=true&characterEncoding=UTF-8&useAffectedRows=true&useSSL=false&serverTimezone=GMT%2B8
+#    username: root
+#    password: admin
+#  second:
+#    jdbc-url: jdbc:mysql://127.0.0.1:3306/test2?useUnicode=true&characterEncoding=UTF-8&useAffectedRows=true&useSSL=false&serverTimezone=GMT%2B8
+#    username: root
+#    password: admin
+
+#  key: ZZ
+
+########################################################
+#          不同环境         Environment for Localhost  注意：数据配置在这里
+########################################################
+---
+spring:
+  profiles: local
+  datasource:
+    #爆红不要紧张，没有问题的只是编辑工具不能识别造成的，本身是正确的
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test2?useUnicode=true&characterEncoding=UTF-8&useAffectedRows=true&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: admin
+#
+    hikari:
+      max-lifetime: 1765000
+      maximum-pool-size: 15
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    database: 1
+#swagger:
+#  print-init: true
+#  enabled: true
+#  docket:
+#    base-package:  com.arc.zero.controller
+
+########################################################
+#          不同环境         Environment for Localhost  注意：数据配置在这里
+########################################################
+---
+spring:
+  profiles: test
+  redis:
+    database: 1
+    host: 127.0.0.1
+    port: 6379
+    password:
