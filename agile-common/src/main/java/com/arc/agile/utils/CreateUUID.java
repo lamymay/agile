@@ -1,4 +1,4 @@
-package com.arc.agile.utils;//package com.arc.blog.utils.temp;
+//package com.arc.agile.utils;
 //
 //import java.net.NetworkInterface;
 //import java.nio.ByteBuffer;
@@ -125,6 +125,7 @@ package com.arc.agile.utils;//package com.arc.blog.utils.temp;
 //        return (int) diff;
 //    }
 //
+//    @Override
 //    public int compareTo(CreateUUID id) {
 //        if (id == null){
 //            return -1;
