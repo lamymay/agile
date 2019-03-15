@@ -30,46 +30,7 @@
 # 修改记录 t_project_change_log
 # 规则表 t_regulation
 # 问题表 t_issue
-
-
-
 # 问题状态字典定义
-CREATE TABLE `issue_status` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '标识表ID',
-
-  `filename` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '文件名称',
-  `avatar_type` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT 'project/user',
-  `status_category` int(8) NULL DEFAULT NULL COMMENT '保留字段,状态分类',
-  `description` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL COMMENT '说明[text]',
-
-  `create_date` timestamp(0) NULL DEFAULT NULL COMMENT '创建时间',
-  `update_date` timestamp(0) NULL DEFAULT NULL COMMENT '更新时间',
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '标识表 字典作用' ROW_FORMAT = Dynamic;
-
-
-
-
-
-
-# 工作内容表（可能是一个project也可能是多个project组成的事情） t_component
-CREATE TABLE `t_project_component` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '项目数据修改日志表ID',
-  `code` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '字符编码,冗余',
-  `project_id` bigint(20) NOT NULL  COMMENT '项目表ID',
-  `name` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '名称-128',
-  `state` int(8) NOT NULL COMMENT '状态',
-   `area_level` int(3) NULL DEFAULT NULL COMMENT '级别',
-   `parent_id` int(11) NOT NULL COMMENT '父节点ID（子项目做级联用）',
-  `parent_name` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '父节点名',
-  `note` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT '' COMMENT '注释',
-  `url` varchar(225) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '地址',
-  `create_date` timestamp NULL DEFAULT NULL COMMENT '创建时间',
-  `update_date` timestamp NULL DEFAULT NULL COMMENT '更新时间',
-
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='工作内容表（可能是一个project也可能是多个project组成的）';
-
 
 
 ----------------------------------------------------------------------------------------------------------
@@ -100,9 +61,48 @@ CREATE TABLE `t_project_component` (
 管家级别操作是需要记录的
 ----------------------------------------------------------------------------------------------------------
 
+#以下为临时数据，
+
+
+# 问题状态字典定义
+CREATE TABLE `issue_status` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '标识表ID',
+
+  `filename` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '文件名称',
+  `avatar_type` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT 'project/user',
+  `status_category` int(8) NULL DEFAULT NULL COMMENT '保留字段,状态分类',
+  `description` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL COMMENT '说明[text]',
+
+  `create_date` timestamp(0) NULL DEFAULT NULL COMMENT '创建时间',
+  `update_date` timestamp(0) NULL DEFAULT NULL COMMENT '更新时间',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '标识表 字典作用' ROW_FORMAT = Dynamic;
+
+
+
+
+# 工作内容表（可能是一个project也可能是多个project组成的事情） t_component
+CREATE TABLE `t_project_component` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '项目数据修改日志表ID',
+  `code` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '字符编码,冗余',
+  `project_id` bigint(20) NOT NULL  COMMENT '项目表ID',
+  `name` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '名称-128',
+  `state` int(8) NOT NULL COMMENT '状态',
+   `area_level` int(3) NULL DEFAULT NULL COMMENT '级别',
+   `parent_id` int(11) NOT NULL COMMENT '父节点ID（子项目做级联用）',
+  `parent_name` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '父节点名',
+  `note` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT '' COMMENT '注释',
+  `url` varchar(225) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '地址',
+  `create_date` timestamp NULL DEFAULT NULL COMMENT '创建时间',
+  `update_date` timestamp NULL DEFAULT NULL COMMENT '更新时间',
+
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='工作内容表（可能是一个project也可能是多个project组成的）';
+
+----------------------------------------------------------------------------------------------------------
+
 # 单词
 # released	v.	发布; 发行; 释放( release的过去式和过去分词 ); 放开;
-
 # archived v.	存档( archive的过去式和过去分词 );
 
 
