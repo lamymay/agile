@@ -2,6 +2,7 @@ package com.arc.agile.controller.data.agile;
 
 import com.arc.agile.model.domain.agile.Project;
 import com.arc.agile.service.agile.ProjectService;
+import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,6 +12,7 @@ import javax.annotation.Resource;
  * @author 叶超
  * @since 2019/3/12 9:20
  */
+@Api
 @Slf4j
 @RestController
 @RequestMapping("/project")
