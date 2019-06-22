@@ -19,7 +19,7 @@ import java.io.InputStreamReader;
 //新建个类 用来存放body
 public class MAPIHttpServletRequestWrapper extends HttpServletRequestWrapper {
 
-    private final byte[] body; // 报文
+    private  byte[] body; // 报文
 
     public MAPIHttpServletRequestWrapper(HttpServletRequest request) throws IOException {
         super(request);
