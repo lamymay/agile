@@ -23,19 +23,17 @@ public class ProjectServiceImpl implements ProjectService {
 
     @Override
     public Long save(Project project) {
-         int save = projectMapper.save(project);
-        return save == 0 ? null : project.getId();
+        return projectMapper.save(project) == 0 ? null : project.getId();
     }
 
     @Override
     public Integer delete(Long id) {
-        return  projectMapper.delete(id);
-
+        return projectMapper.delete(id);
     }
 
     @Override
     public Integer update(Project project) {
-        return  projectMapper.update(project);
+        return projectMapper.update(project);
     }
 
     @Override
