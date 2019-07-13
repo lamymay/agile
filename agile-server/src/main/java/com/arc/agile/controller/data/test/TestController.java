@@ -1,4 +1,4 @@
-package com.arc.agile.controller.data.agile;
+package com.arc.agile.controller.data.test;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestMapping;

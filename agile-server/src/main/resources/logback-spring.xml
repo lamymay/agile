@@ -10,7 +10,7 @@ debug:当此属性设置为true时，将打印出logback内部日志信息，实
     <!--<property name="logback.appname" value="app"/>-->
     <!--application.yml 传递参数，不能使用logback 自带的<property>标签 -->
     <springProperty scope="context" name="appName" source="spring.application.name"/>
-    <springProperty scope="context" name="appHome" source="logback.dir"/>
+    <springProperty scope="context" name="appHome" source="log.dir"/>
 
     <contextName>${appName}日志 :)</contextName>
 

@@ -24,9 +24,8 @@ spring:
     encoding: UTF-8
     #https://blog.csdn.net/zoeou/article/details/78629032
 
-#配置日志
-#  这里日志用xml去配置
-logback:
+#配置日志-这里日志用xml去配置
+log:
   dir: ./log
 
 
@@ -87,7 +86,7 @@ spring:
   datasource:
     #爆红不要紧张，没有问题的只是编辑工具不能识别造成的，本身是正确的
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/agile?useUnicode=true&characterEncoding=UTF-8&useAffectedRows=true&useSSL=false&serverTimezone=GMT%2B8
+    url: jdbc:mysql://127.0.0.1:3306/test2?useUnicode=true&characterEncoding=UTF-8&useAffectedRows=true&useSSL=false&serverTimezone=GMT%2B8
     username: root
     password: admin
 #
