@@ -1,4 +1,4 @@
-package com.arc.agile.config;
+package com.arc.agile.config.mybatis;
 
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import org.mybatis.spring.annotation.MapperScan;

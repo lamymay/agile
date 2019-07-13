@@ -15,38 +15,38 @@ import javax.annotation.Resource;
 @Api
 @Slf4j
 @RestController
-@RequestMapping("/project")
+@RequestMapping("/projects")
 public class ProjectController {
 
     @Resource
     private ProjectService projectService;
 
-    @PostMapping("/save")
+    @PostMapping("")
     public Object save(@RequestBody Project project) {
         log.debug(" save 接口的参数={}", project);
         return projectService.save(project);
     }
 
-    @PostMapping("/update")
+    @PutMapping("")
     public Object update(@RequestBody Project project) {
         log.debug(" update 接口的参数={}", project);
         return projectService.update(project);
     }
 
-    @GetMapping("/get/{id}")
+    @GetMapping("/{id}")
     public Object get(@PathVariable(name = "id", required = true) Long id) {
         log.debug(" get 接口的参数id={}", id);
         return projectService.get(id);
     }
 
-    @GetMapping("/delete/{id}")
+    @DeleteMapping("/{id}")
     public Object delete(@PathVariable(name = "id", required = true) Long id) {
         log.debug(" delete 接口的参数id={}", id);
         return projectService.delete(id);
     }
 
-    @RequestMapping("/list")
-    public Object list() {
+    @PostMapping("/page")
+    public Object list(@RequestBody ProjectRequest Request) {
         return projectService.list();
     }
 

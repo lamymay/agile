@@ -9,6 +9,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 //@MapperScan("com.arc.agile.mapper")
 @SpringBootApplication
+        (exclude = {
+                org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration.class,
+                org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration.class
+
+        })
 public class AgileApplication {
 
     public static void main(String[] args) {

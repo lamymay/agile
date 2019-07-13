@@ -1,4 +1,4 @@
-package com.arc.agile.config.filter;
+package com.arc.agile.config.cors;
 
 
 import org.springframework.context.annotation.Bean;
@@ -20,6 +20,7 @@ import org.springframework.web.filter.CorsFilter;
 @Configuration
 public class CorsConfig {
 
+    //允许跨域的头，域名，方法 应该在配置中心统一对不同项目做配置，而非在此硬编码全部放过去
 
     /**
      * 新增一个configration类 或 在Application中加入CorsFilter和CorsConfiguration方法
