@@ -1,6 +1,7 @@
 package com.arc.agile.mapper.system;
 
-import com.arc.agile.model.domain.system.SysUser;
+
+import com.arc.model.domain.system.SysUser;
 
 import java.util.List;
 

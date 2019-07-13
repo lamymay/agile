@@ -1,7 +1,7 @@
 package com.arc.agile.service.agile.impl;
 
-import com.arc.agile.model.domain.agile.ProjectComponent;
 import com.arc.agile.service.agile.ProjectComponentService;
+import com.arc.model.domain.agile.ProjectComponent;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 

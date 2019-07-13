@@ -1,8 +1,8 @@
 package com.arc.agile.service.system.impl;
 
 import com.arc.agile.mapper.system.SysUserMapper;
-import com.arc.agile.model.domain.system.SysUser;
 import com.arc.agile.service.system.SysUserService;
+import com.arc.model.domain.system.SysUser;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 

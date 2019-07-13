@@ -1,7 +1,7 @@
 package com.arc.agile.service.agile.impl;
 
-import com.arc.agile.model.domain.agile.ProjectChangeLog;
 import com.arc.agile.service.agile.ProjectChangeLogService;
+import com.arc.model.domain.agile.ProjectChangeLog;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 

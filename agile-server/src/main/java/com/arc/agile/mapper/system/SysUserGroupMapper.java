@@ -1,7 +1,7 @@
 package com.arc.agile.mapper.system;
 
 import com.arc.agile.mapper.SuperMapper;
-import com.arc.agile.model.domain.system.SysUserGroup;
+import com.arc.model.domain.system.SysUserGroup;
 
 /**
  * JAVA项目是分层来写的，

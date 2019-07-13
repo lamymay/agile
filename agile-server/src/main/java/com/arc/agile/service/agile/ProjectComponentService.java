@@ -1,6 +1,7 @@
 package com.arc.agile.service.agile;
 
-import com.arc.agile.model.domain.agile.ProjectComponent;
+
+import com.arc.model.domain.agile.ProjectComponent;
 
 import java.util.List;
 

@@ -1,9 +1,9 @@
 package com.arc.agile.controller.data.system;
 
 
-import com.arc.agile.model.domain.system.SysUser;
-import com.arc.agile.model.vo.ResponseVo;
 import com.arc.agile.service.system.SysUserService;
+import com.arc.model.domain.system.SysUser;
+import com.arc.model.vo.ResponseVo;
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;

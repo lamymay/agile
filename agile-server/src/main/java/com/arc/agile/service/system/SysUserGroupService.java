@@ -1,6 +1,7 @@
 package com.arc.agile.service.system;
 
-import com.arc.agile.model.domain.system.SysUserGroup;
+
+import com.arc.model.domain.system.SysUserGroup;
 
 import java.util.List;
 

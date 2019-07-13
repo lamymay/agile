@@ -1,7 +1,7 @@
 package com.arc.agile.controller.data.agile;
 
-import com.arc.agile.model.domain.agile.Project;
 import com.arc.agile.service.agile.ProjectService;
+import com.arc.model.domain.agile.Project;
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;

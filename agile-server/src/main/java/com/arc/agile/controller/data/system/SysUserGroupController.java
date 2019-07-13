@@ -1,7 +1,7 @@
 package com.arc.agile.controller.data.system;
 
-import com.arc.agile.model.domain.system.SysUser;
 import com.arc.agile.service.system.SysUserGroupService;
+import com.arc.model.domain.system.SysUser;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

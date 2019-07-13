@@ -1,7 +1,7 @@
 package com.arc.agile.mapper.agile;
 
 import com.arc.agile.mapper.SuperMapper;
-import com.arc.agile.model.domain.agile.ProjectChangeLog;
+import com.arc.model.domain.agile.ProjectChangeLog;
 
 import java.util.List;
 

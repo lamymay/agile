@@ -1,8 +1,8 @@
 package com.arc.agile.service.system.impl;
 
 import com.arc.agile.mapper.system.SysUserGroupMapper;
-import com.arc.agile.model.domain.system.SysUserGroup;
 import com.arc.agile.service.system.SysUserGroupService;
+import com.arc.model.domain.system.SysUserGroup;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
