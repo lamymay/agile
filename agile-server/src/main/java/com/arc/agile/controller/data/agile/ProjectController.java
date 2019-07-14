@@ -56,8 +56,8 @@ public class ProjectController {
     }
 
     @PostMapping("/page")
-    public Object list(@RequestBody ProjectRequest Request) {
-        return projectService.list();
+    public Object list(@RequestBody ProjectRequest request) {
+        return projectService.page(request);
     }
 
 

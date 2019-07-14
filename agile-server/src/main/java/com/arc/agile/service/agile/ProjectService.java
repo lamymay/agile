@@ -2,6 +2,8 @@ package com.arc.agile.service.agile;
 
 
 import com.arc.model.domain.agile.Project;
+import com.arc.model.request.agile.ProjectRequest;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 
 import java.util.List;
 
@@ -20,4 +22,6 @@ public interface ProjectService {
     Project get(Long id);
 
     List<Project> list();
+
+    Page page(ProjectRequest request);
 }

@@ -3,6 +3,9 @@ package com.arc.agile.service.agile.impl;
 import com.arc.agile.mapper.agile.ProjectMapper;
 import com.arc.agile.service.agile.ProjectService;
 import com.arc.model.domain.agile.Project;
+import com.arc.model.request.agile.ProjectRequest;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -44,5 +47,12 @@ public class ProjectServiceImpl implements ProjectService {
     @Override
     public List<Project> list() {
         return projectMapper.list();
+    }
+
+    @Override
+    public Page page(ProjectRequest request) {
+        IPage<Project> wrapper=null;
+//        return projectMapper.selectPage(null);
+        return null;
     }
 }
