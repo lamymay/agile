@@ -46,6 +46,44 @@ usr1，usr2，usr3.... -->userGroup -->Role(groupRole/otherRole)
 
 
 JIRA使用OfBiz套件的实体引擎模块与数据库通信，OFBiz是一个非常著名的电子商务平台，是一个非常著名的开源项目，提供了创建基于最新J2EE/XML规范和技术标准，构建大中型企业级、跨平台、跨数据库、跨应用服务器的多层、分布式电子商务类WEB应用系统的框架。 OFBiz最主要的特点是OFBiz提供了一整套的开发基于Java的web应用程序的组件和工具。包括实体引擎, 服务引擎, 消息引擎, 工作流引擎, 规则引擎等。
+
+
+
+
+Project和Issue
+Project这个概念很简单，就是一个“项目”。开发一个App是一个项目，开发一个微信小程序也是一个项目，公司办公室搬迁也可以是一个项目。可以说，在项目管理范畴内可以看作“项目”的，都是Jira中的项目。
+Project是Issue的容器。在创建项目时，JIRA会要求你指定“KEY”，这个KEY加上数字，就是Issue的唯一ID了。比如新建一个项目，KEY设置为WEB，那么项目下的第一条Issue就是WEB-1，第二条Issue是WEB-2，依此类推。
+
+而Issue则是Jira核心中的核心，它分为以下几种类型：
+
+Story 故事（即敏捷开发中的“用户故事”）
+Epic 史诗
+Improvement 提升
+New Feature 新特性
+Bug 缺陷
+Task 任务
+Sub-Task 子任务
+
+
+
+
+ Field
+一个Story会有属性：名称、详细描述、提交人、提交时间、优先级、状态等等。这些属性就是Field字段。而所谓的Story，也是Type属性为“Story”的Issue而已，把Type属性改成“Epic”，那这个Story就会变成Epic了。
+
+
+
+
+我们知道，任务会有不同的状态：待办，进行中，已完成；需求也会有不同的状态：刚提交，待评审，暂缓，已拒绝，开发中，已完成，等等。Workflow就是用来定义定义Issue的状态。
+
+Workflow由两部分组成：
+
+Status 状态
+Transition 转换动作
+
+
+
+
+
 --------------------- 
 
 
